@@ -4,7 +4,83 @@
 
 @layer base {
   @font-face {
-    font-family: "ProximaNova";
-    src: url("../fonts/proximanova.ttf") format("ttf");
+    font-family: "Proxima Nova";
+    src: url("./../fonts/proximanova.ttf");
+  }
+
+  body,
+  p,
+  div,
+  a,
+  button,
+  ul,
+  li,
+  html,
+  span,
+  input,
+  textarea,
+  input::placeholder,
+  textarea::placeholder,
+  * {
+    font-family: "Proxima Nova" !important;
+  }
+
+  .nav-link-styles {
+    color: #0d2668;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .slide-first {
+    animation: horizontal-scrolling-animation 20s linear infinite;
+  }
+
+  .slide-second {
+    animation: horizontal-scrolling-animation 20s linear infinite;
+    animation-delay: 10s;
+  }
+
+  .infinity-wrapper:hover .slide-first,
+  .infinity-wrapper:hover .slide-second {
+    animation-play-state: paused;
+  }
+
+  @keyframes horizontal-scrolling-animation {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
+    }
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 14px;
+    color: #0d2668;
+    font-weight: 600;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #0d2668 !important;
+  }
+
+  @media (min-width: 850px) and (max-width: 1300px) {
+    .swiper .swiper-pagination {
+      bottom: 0px !important;
+    }
+  }
+
+  @media (max-width: 999.5px) {
+    .swiper .swiper-button-next:after,
+    .swiper .swiper-button-prev:after {
+      font-size: 10px !important;
+    }
   }
 }

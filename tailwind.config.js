@@ -2,10 +2,16 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-    extend: {},
-    fontFamily: {
-      'proxima': ['ProximaNova', 'sans'], // 'sans' tashqi shrift
+    extend: {
+      fontFamily: {
+        proximanova: ["Proxima Nova"],
+      },
     },
+    // screens: {
+    //   sm: "360px",
+    //   md: "576px",
+    //   lg: "768px",
+    // },
   },
   plugins: [],
 };
