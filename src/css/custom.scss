@@ -67,11 +67,6 @@
   }
 }
 
-@media (min-width: 768px) {
-  .sponsors .wrapper img {
-    width: 50px !important;
-  }
-}
 @media (max-width: 750px) {
   .branches-container {
     grid-template-columns: repeat(2, 50%);

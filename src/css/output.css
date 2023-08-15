@@ -1127,18 +1127,6 @@ body,
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.w-\[70\%\] {
-  width: 70%;
-}
-
-.w-\[60\%\] {
-  width: 60%;
-}
-
 .max-w-\[1000px\] {
   max-width: 1000px;
 }
@@ -1173,10 +1161,6 @@ body,
 
 .max-w-screen-xl {
   max-width: 1280px;
-}
-
-.max-w-\[60\%\] {
-  max-width: 60%;
 }
 
 .flex-shrink {
@@ -3282,12 +3266,12 @@ body,
 }
 
 @media(max-width:576px) {
-  .\[\@media\(max-width\:576px\)\]\:mt-1 {
-    margin-top: 0.25rem;
-  }
-
   .\[\@media\(max-width\:576px\)\]\:mb-2 {
     margin-bottom: 0.5rem;
+  }
+
+  .\[\@media\(max-width\:576px\)\]\:mt-1 {
+    margin-top: 0.25rem;
   }
 
   .\[\@media\(max-width\:576px\)\]\:h-\[250px\] {
@@ -3487,18 +3471,8 @@ body,
     height: 30px;
   }
 
-  .\[\@media\(min-width\:1000px\)\]\:h-\[360px\] {
-    height: 360px;
-  }
-
   .\[\@media\(min-width\:1000px\)\]\:w-\[30px\] {
     width: 30px;
-  }
-}
-
-@media(min-width:1300px) {
-  .\[\@media\(min-width\:1300px\)\]\:h-\[500px\] {
-    height: 500px;
   }
 }
 
@@ -3708,10 +3682,6 @@ body,
   .\[\@media\(min-width\:850px\)\]\:my-20 {
     margin-top: 5rem;
     margin-bottom: 5rem;
-  }
-
-  .\[\@media\(min-width\:850px\)\]\:h-\[320px\] {
-    height: 320px;
   }
 
   .\[\@media\(min-width\:850px\)\]\:h-\[500px\] {

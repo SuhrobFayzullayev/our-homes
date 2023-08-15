@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -391,7 +391,7 @@
         <div class="swiper mySwiper h-fit w-full">
           <!-- Slide wrapper start -->
           <div
-            class="swiper-wrapper [@media(min-width:850px)]:h-[320px] [@media(min-width:1000px)]:h-[360px] [@media(min-width:1300px)]:h-[500px] [&>.swiper-slide.swiper-slide-active]:opacity-100"
+            class="swiper-wrapper [&>.swiper-slide.swiper-slide-active]:opacity-100"
           >
             <!-- Slides start -->
             <div
@@ -428,7 +428,10 @@
 
       <div class="bg-[#F3F4F7] w-full mx-auto">
         <!-- Our Branches start -->
-        <div class="our-branches w-full mx-auto h-fit mt-16 py-14 px-5">
+        <div
+          id="branches"
+          class="our-branches w-full mx-auto h-fit mt-16 py-14 px-5"
+        >
           <!-- Text content start -->
           <div class="text-content px-3 mx-auto max-w-[1000px] overflow-hidden">
             <!-- Title start -->
@@ -696,29 +699,30 @@
               <form action="" method="get" class="my-3">
                 <div class="input-content my-5">
                   <input
+                    id="userName-first"
                     type="text"
-                    required
                     class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white"
                     placeholder="Имя"
                   />
                   <input
+                    id="userNumber-first"
                     type="number"
-                    required
                     class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white"
                     placeholder="Телефон"
                   />
-                  <input
-                    type="text"
-                    required
-                    class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white"
-                    placeholder="Ваш город"
-                  />
+                  <textarea
+                    id="userComment-first"
+                    rows="3"
+                    class="w-full px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-white"
+                    placeholder="Комментарий"
+                  ></textarea>
                 </div>
                 <div
                   class="button-content mt-3 w-full flex justify-center items-center"
                 >
                   <button
-                    type="submit"
+                    id="sent-feedback-button"
+                    type="button"
                     class="border-none [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]"
                   >
                     Отправить
@@ -747,9 +751,12 @@
           </div>
           <!-- Text content end -->
 
-          <div class="card-wrapper mt-3 w-full mx-auto flex flex-wrap">
+          <div
+            id="videosWrapper"
+            class="card-wrapper mt-3 w-full mx-auto flex flex-wrap"
+          >
             <div
-              class="video-card [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
+              class="video-card 1 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
             >
               <div class="w-full shadow-md h-full bg-white">
                 <div
@@ -760,6 +767,7 @@
                     class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
                   >
                     <svg
+                      onclick="activeVideo(event)"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 60 60"
                       fill="none"
@@ -807,7 +815,7 @@
               </div>
             </div>
             <div
-              class="video-card [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
+              class="video-card 2 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
             >
               <div class="w-full shadow-md h-full bg-white">
                 <div
@@ -818,6 +826,7 @@
                     class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
                   >
                     <svg
+                      onclick="activeVideo(event)"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 60 60"
                       fill="none"
@@ -831,11 +840,11 @@
                       />
                     </svg>
                   </div>
-                  <a data-fancybox href="https://youtu.be/yxq2sirgexU">
+                  <a data-fancybox href="https://youtu.be/7VxGSQODmJU">
                     <img
                       id="videoImg"
                       class="w-full h-full object-cover"
-                      src="./src/images/slider-room-2.jpg"
+                      src="./src/images/slider-room-1.jpg"
                     />
                   </a>
                 </div>
@@ -848,7 +857,7 @@
                     <div
                       class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]"
                     >
-                      Sherxon
+                      John Doe
                     </div>
                     <!-- Title end -->
 
@@ -865,7 +874,7 @@
               </div>
             </div>
             <div
-              class="video-card [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
+              class="video-card 3 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
             >
               <div class="w-full shadow-md h-full bg-white">
                 <div
@@ -876,6 +885,7 @@
                     class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
                   >
                     <svg
+                      onclick="activeVideo(event)"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 60 60"
                       fill="none"
@@ -889,11 +899,11 @@
                       />
                     </svg>
                   </div>
-                  <a data-fancybox href="https://youtu.be/yxq2sirgexU">
+                  <a data-fancybox href="https://youtu.be/ldbvjn2sIzg">
                     <img
                       id="videoImg"
                       class="w-full h-full object-cover"
-                      src="./src/images/form-img.jpg"
+                      src="./src/images/slider-room-1.jpg"
                     />
                   </a>
                 </div>
@@ -906,7 +916,7 @@
                     <div
                       class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]"
                     >
-                      Suhrob
+                      John Doe
                     </div>
                     <!-- Title end -->
 
@@ -914,7 +924,7 @@
                     <div
                       class="description mt-1 [@media(min-width:700px)]:max-h-[115px] [@media(max-width:700px)]:max-h-[60px] overflow-hidden [@media(min-width:700px)]:text-[15px] [@media(max-width:700px)]:text-[13px]"
                     >
-                      LoremLorem Lorem ipsu LoremLorem LoremLorem Lorem ipsu
+                      LoremLorem Lorem ipsu LoremLorem
                     </div>
                     <!-- Description end -->
                   </div>
@@ -928,11 +938,11 @@
             class="button-content mt-3 w-full flex justify-center items-center"
           >
             <button
-              id="sent-feedback-button"
+              onclick="moreVideo()"
               type="button"
               class="border-none mt-5 [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-[#0D2668]"
             >
-              Оставить отзыв
+              больше
             </button>
           </div>
         </div>
@@ -964,18 +974,21 @@
               <form action="" method="get" class="my-3">
                 <div class="input-content">
                   <input
+                    id="userName-second"
                     required
                     type="text"
                     class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]"
                     placeholder="Имя"
                   />
                   <input
+                    id="userNumber-second"
                     required
                     type="number"
                     class="w-full [@media(min-width:576px)]:h-[40px] [@media(max-width:576px)]:h-[35px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]"
                     placeholder="Телефон"
                   />
                   <textarea
+                    id="userComment-second"
                     required
                     type="text"
                     class="w-full h-[100px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#696969] outline-none border-none bg-[#F3F4F7]"
@@ -983,12 +996,13 @@
                   ></textarea>
                 </div>
                 <div class="upload-video mb-5 w-full">
-                  <button
-                    type="button"
-                    class="border w-full bg-white border-[#0D2668] [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#0D2668]"
+                  <input type="file" class="hidden" id="file" />
+                  <label
+                    for="file"
+                    class="border text-center block bg-white border-[#0D2668] [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#0D2668]"
                   >
                     Загрузить видео
-                  </button>
+                  </label>
                 </div>
                 <div
                   class="button-content mt-3 w-full flex justify-center items-center"
@@ -1521,6 +1535,8 @@
             </div>
           </div>
         </div>
+
+        <div id="partners"></div>
       </div>
       <!-- Advertising integrations end -->
 
@@ -1551,74 +1567,89 @@
             <div
               class="item w-1/4 py-2 px-3 h-fit border-r-2 border-b-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/salamon.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/salamon.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="item w-1/4 py-2 px-3 h-fit border-r-2 border-b-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/intel.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#"
+                ><img
+                  src="./src/images/intel.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+              /></a>
             </div>
             <div
               class="item w-1/4 py-2 px-3 h-fit border-r-2 border-b-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/xbox.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/xbox.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="item w-1/4 py-[7.3px] px-3 h-fit border-b-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/visa.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/visa.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="item w-1/4 py-2 px-3 h-fit border-r-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/mazda.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/mazda.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="item w-1/4 py-2 px-3 h-fit border-r-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/mir.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/mir.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="item w-1/4 py-2 px-3 h-fit border-r-2 flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/canon.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/canon.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="item w-1/4 py-2 px-3 h-fit flex justify-center items-center overflow-hidden"
             >
-              <img
-                src="./src/images/samsung.png"
-                class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
-                alt=""
-              />
+              <a href="#">
+                <img
+                  src="./src/images/samsung.png"
+                  class="[@media(min-width:500px)]:w-[100px] [@media(max-width:500px)]:w-full object-center"
+                  alt=""
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -1627,6 +1658,7 @@
 
       <!-- Contact start -->
       <div
+        id="contacts"
         class="contact h-[450px] w-full flex flex-wrap justify-between items-start"
       >
         <div
@@ -1662,15 +1694,23 @@
             </div>
 
             <div class="description mt-2 text-[white] text-[19px]">
-              Шайхонтохурский район, Кошикчи дом 1, микрорайон Кох-ота <br />
-              +998 (90) 001 10 01
+              <a
+                class="text-[white]"
+                href="https://www.google.com/maps/search/%D0%A8%D0%B0%D0%B9%D1%85%D0%BE%D0%BD%D1%82%D0%BE%D1%85%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9+%D1%80%D0%B0%D0%B9%D0%BE%D0%BD,+%D0%9A%D0%BE%D1%88%D0%B8%D0%BA%D1%87%D0%B8+%D0%B4%D0%BE%D0%BC+1,+%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%80%D0%B0%D0%B9%D0%BE%D0%BD+%D0%9A%D0%BE%D1%85-%D0%BE%D1%82%D0%B0/@41.3353947,69.2585528,17z/data=!3m1!4b1?entry=ttu"
+              >
+                Шайхонтохурский район, Кошикчи дом 1, микрорайон Кох-ота
+              </a>
+              <br />
+              <a href="tel:+998 (90) 001 10 01" class="text-white"
+                >+998 (90) 001 10 01</a
+              >
             </div>
             <!-- Description end -->
           </div>
           <!-- Text content end -->
 
           <div class="w-[220px] mt-8 flex justify-between">
-            <div class="sm-icon">
+            <a href="#" class="sm-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -1692,8 +1732,9 @@
                   fill="#0D2668"
                 />
               </svg>
-            </div>
-            <div
+            </a>
+            <a
+              href="#"
               class="sm-icon flex justify-center items-center bg-[white] rounded-full w-[40px] h-[40px] p-2"
             >
               <svg
@@ -1714,8 +1755,8 @@
                   </clipPath>
                 </defs>
               </svg>
-            </div>
-            <div class="sm-icon">
+            </a>
+            <a href="#" class="sm-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -1729,8 +1770,8 @@
                   fill="#0D2668"
                 />
               </svg>
-            </div>
-            <div class="sm-icon">
+            </a>
+            <a href="#" class="sm-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -1744,7 +1785,7 @@
                   fill="#0D2668"
                 />
               </svg>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -1754,30 +1795,46 @@
             class="text-content max-w-screen-xl mx-auto flex flex-wrap justify-between items-center"
           >
             <div
-              class="text-[white] text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center [@media(max-width:576px)]:mb-2"
+              class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center [@media(max-width:576px)]:mb-2"
             >
-              “Uy Bozorim” Все права защищены
+              <a href="./index.html" class="text-[white]"
+                >“Uy Bozorim” Все права защищены</a
+              >
             </div>
             <div
               class="links [@media(max-width:1000px)]:hidden [@media(min-width:1000px)]:flex w-fit justify-between items-center"
             >
-              <div class="link mx-5 font-[500] text-[white] text-[16px]">
+              <a
+                href="./about.html"
+                class="link mx-5 font-[500] text-[white] text-[16px]"
+              >
                 О нас
-              </div>
-              <div class="link mx-5 font-[500] text-[white] text-[16px]">
+              </a>
+              <a
+                href="#branches"
+                class="link mx-5 font-[500] text-[white] text-[16px]"
+              >
                 Филиалы
-              </div>
-              <div class="link mx-5 font-[500] text-[white] text-[16px]">
+              </a>
+              <a
+                href="#partners"
+                class="link mx-5 font-[500] text-[white] text-[16px]"
+              >
                 Партнеры
-              </div>
-              <div class="link mx-5 font-[500] text-[white] text-[16px]">
+              </a>
+              <a
+                href="#contacts"
+                class="link mx-5 font-[500] text-[white] text-[16px]"
+              >
                 Контакты
-              </div>
+              </a>
             </div>
             <div
-              class="text-[white] text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center"
+              class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center"
             >
-              © Copyright 2023 - SOS Group
+              <a class="text-[white]" href="https://sos.uz">
+                © Copyright 2023 - SOS Group
+              </a>
             </div>
           </div>
         </div>

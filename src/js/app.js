@@ -3,6 +3,14 @@ const navbarToggler = document.querySelector("#navbar-toggler");
 const roomSlider = document.querySelector(".swiper-wrapper");
 const sentFeedbackBtn = document.querySelector("#sent-feedback-button");
 const feedbackBackdrop = document.querySelector("#feedback-backdrop");
+const userNameFirst = document.querySelector("#userName-first");
+const userNumberFirst = document.querySelector("#userNumber-first");
+const userCommentFirst = document.querySelector("#userComment-first");
+const userNameSecond = document.querySelector("#userName-second");
+const userNumberSecond = document.querySelector("#userNumber-second");
+const userCommentSecond = document.querySelector("#userComment-second");
+const videosWrapper = document.querySelector("#videosWrapper");
+let oldAllVideos = "";
 
 navbarToggler.addEventListener("click", () => {
   offCanvas.classList.add("open-canvas");
@@ -47,14 +55,34 @@ document.body.addEventListener("click", (e) => {
     roomSlider.appendChild(roomSlider.children[2].cloneNode(true));
     roomSlider.appendChild(roomSlider.children[3].cloneNode(true));
   }
+
+  oldAllVideos = videosWrapper.innerHTML;
+  if (Array.from(videosWrapper.children).length > 3) {
+    let count = 0;
+    Array.from(videosWrapper.children).map((item) => {
+      count++;
+      if (count >= 4) item.remove();
+    });
+  }
 })();
 
-// document.querySelector("#video-play-btn svg")?.addEventListener("click", () => {
-//   document.querySelector("#videoImg").click();
-// });
+function activeVideo(e) {
+  let parent = e.target.parentElement.parentElement.parentElement;
+  if (parent.className.includes("img-content"))
+    parent.querySelector("a img").click();
+  else parent.querySelector(".img-content a img").click();
+}
 
 sentFeedbackBtn.addEventListener("click", () => {
   feedbackBackdrop.classList.add("active-feedback-backdrop");
   feedbackBackdrop.classList.remove("hidden");
   feedbackBackdrop.classList.add("flex");
+
+  userNameSecond.value = userNameFirst.value.trim();
+  userCommentSecond.value = userCommentFirst.value.trim();
+  userNumberSecond.value = userNumberFirst.value.trim();
 });
+
+function moreVideo() {
+  videosWrapper.innerHTML = oldAllVideos;
+}
