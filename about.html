@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="./src/css/output.css" rel="stylesheet" />
+    <link href="./src/css/custom.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <title>Uy Bozorim | About</title>
+  </head>
+  <body>
+    <div class="wrapper w-full flex min-h-[100vh] flex-col">
+      <!-- Header start -->
+      <div class="header-sticy mx-auto bg-white w-full fixed z-50 top-0">
+        <div class="header shadow-md relative mx-auto px-2">
+          <div
+            class="navbar mx-auto max-w-screen-xl flex justify-between items-center py-3"
+          >
+            <!-- Navbar toogler start -->
+            <div id="navbar-toggler" class="navbar-toggler block lg:hidden">
+              <img
+                class="[@media(min-width:450px)]:w-[25px] [@media(min-width:450px)]:h-[25px] [@media(max-width:450px)]:w-[20px] [@media(max-width:450px)]:h-[20px]"
+                src="https://img.icons8.com/ios-filled/50/000000/menu--v6.png"
+                alt="menu--v6"
+              />
+            </div>
+            <!-- Navbar toogler end -->
+
+            <!-- Logo start -->
+            <div
+              class="ml-3 [@media(min-width:450px)]:w-[200px] [@media(max-width:450px)]:w-[140px]"
+            >
+              <a href="/index.html">
+                <img src="./src/images/logo.jpg" alt="logo" />
+              </a>
+            </div>
+            <!-- Logo end -->
+
+            <!-- Navbar-links start -->
+            <div
+              class="links w-[65%] hidden lg:flex justify-evenly items-center"
+            >
+              <div class="link">
+                <a href="./about.html" class="nav-link-styles"> О нас </a>
+              </div>
+              <div class="link">
+                <a href="./index.html#branches" class="nav-link-styles">
+                  Филиалы
+                </a>
+              </div>
+              <div class="link">
+                <a href="./index.html#partners" class="nav-link-styles">
+                  Партнеры
+                </a>
+              </div>
+              <div class="link">
+                <a href="./index.html#contacts" class="nav-link-styles">
+                  Контакты
+                </a>
+              </div>
+            </div>
+            <!-- Navbar-links end -->
+
+            <!-- Social media and languages start -->
+            <div class="lg:w-[220px] languages-content flex justify-between">
+              <div
+                class="sm-icons hidden lg:flex justify-between items-center w-[110px]"
+              >
+                <a href="#" class="sm-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <rect width="30" height="30" rx="15" fill="#0D2668" />
+                    <path
+                      d="M14.9679 8.25C15.866 8.28207 16.7962 8.28208 17.6943 8.31415C18.4962 8.34623 19.2339 8.47452 19.9395 8.8915C20.8376 9.43677 21.3829 10.2386 21.5754 11.265C21.6716 11.8745 21.7037 12.516 21.7357 13.1254C21.7678 14.4725 21.7357 15.8197 21.7357 17.1668C21.7357 17.8725 21.7037 18.5781 21.4791 19.2517C21.0301 20.5668 20.0999 21.3687 18.7528 21.6253C18.1433 21.7536 17.5018 21.7536 16.8924 21.7856C15.5453 21.8177 14.2302 21.7856 12.8831 21.7856C12.1774 21.7856 11.4718 21.7536 10.7982 21.529C9.4831 21.08 8.68123 20.1498 8.42463 18.8027C8.29633 18.1932 8.29633 17.5517 8.26426 16.9423C8.23218 15.5952 8.26426 14.248 8.26426 12.9009C8.26426 12.1952 8.29633 11.4896 8.52086 10.816C8.9699 9.50092 9.90008 8.69905 11.2472 8.44245C11.8567 8.31415 12.4982 8.31415 13.1076 8.28208C13.6849 8.25 14.3264 8.25 14.9679 8.25ZM20.5169 14.8895C20.4848 14.8895 20.5169 14.8895 20.5169 14.8895C20.4848 14.3442 20.4848 13.831 20.4848 13.2858C20.4848 12.7726 20.4527 12.2594 20.3886 11.7462C20.2603 10.5915 19.5867 9.82167 18.4641 9.59715C17.8867 9.46885 17.2452 9.46885 16.6679 9.46885C15.5132 9.43677 14.3906 9.43677 13.2359 9.46885C12.6585 9.46885 12.0812 9.50092 11.5359 9.59715C10.5737 9.75752 9.90008 10.3028 9.6114 11.265C9.51518 11.5858 9.4831 11.9065 9.45103 12.2273C9.41895 13.4461 9.41895 14.665 9.41895 15.8838C9.41895 16.6536 9.45103 17.4555 9.51518 18.2253C9.6114 19.38 10.3171 20.1819 11.4718 20.3743C12.0491 20.4706 12.6585 20.5026 13.268 20.5026C14.3906 20.5347 15.5132 20.5026 16.6679 20.5026C17.1811 20.5026 17.6943 20.4706 18.2075 20.4064C18.6886 20.3743 19.1377 20.214 19.5226 19.8932C20.1641 19.38 20.3886 18.7064 20.4207 17.9366C20.4848 16.9744 20.4848 15.9159 20.5169 14.8895Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M18.4321 15.0178C18.4321 16.9423 16.8925 18.4819 14.968 18.4819C13.0435 18.4819 11.5039 16.9423 11.5039 14.9857C11.5039 13.0933 13.0756 11.5537 15.0001 11.5537C16.8925 11.5537 18.4321 13.0933 18.4321 15.0178ZM14.9359 17.2631C16.1548 17.2631 17.1812 16.2367 17.1812 15.0178C17.1812 13.799 16.1548 12.7726 14.9359 12.7726C13.685 12.7726 12.6907 13.799 12.6907 15.0178C12.6907 16.2367 13.7171 17.2631 14.9359 17.2631Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M19.3625 11.3932C19.3625 11.8422 19.0096 12.2271 18.5606 12.2271C18.1115 12.2271 17.7266 11.8422 17.7587 11.3932C17.7587 10.9441 18.1115 10.5913 18.5606 10.5913C19.0096 10.5913 19.3625 10.9441 19.3625 11.3932Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+                <div
+                  class="sm-icon bg-[#0d2668] w-[30px] mx-2 h-[30px] rounded-full"
+                >
+                  <a
+                    href="#"
+                    class="flex justify-center items-center w-full h-full"
+                  >
+                    <img src="./src/icons/bi_youtube.svg" alt="" />
+                  </a>
+                </div>
+                <a href="#" class="sm-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <rect width="30" height="30" rx="15" fill="#0D2668" />
+                    <path
+                      d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="language flex justify-center items-center w-[45%]">
+                <a
+                  href="#"
+                  class="mr-3 nav-link-styles [@media(max-width:450px)]:text-[16px] [@media(min-width:450px)]:text-[18px]"
+                  >Ru</a
+                >
+                <a
+                  href="#"
+                  class="nav-link-styles [@media(max-width:450px)]:text-[16px] [@media(min-width:450px)]:text-[18px]"
+                  >Uz</a
+                >
+              </div>
+            </div>
+            <!-- Social media and languages end -->
+          </div>
+
+          <!-- "offCanvas" is a side menu when the device width is lg  -->
+          <!-- offCanvas start -->
+          <div
+            id="header-off-canvas"
+            class="overflow-hidden [&.open-canvas]:translate-x-0 w-[100vw] -translate-x-[100%] header-off-canvas absolute z-20 top-0 left-0 h-[100vh] bg-[rgba(0,0,0,0.3)]"
+          >
+            <!-- Left side start -->
+            <div
+              class="transition-all duration-[0.15s] left-side max-w-[400px] -translate-x-[100%] h-full mr-[60px] bg-white px-8 py-5"
+            >
+              <!-- Navbar links start -->
+              <div class="links w-full">
+                <div class="link">
+                  <a href="#" class="nav-link-styles"> О нас </a>
+                </div>
+                <div class="link my-3">
+                  <a href="#branches" class="nav-link-styles"> Филиалы </a>
+                </div>
+                <div class="link my-3">
+                  <a href="#partners" class="nav-link-styles"> Партнеры </a>
+                </div>
+                <div class="link">
+                  <a href="#contacts" class="nav-link-styles"> Контакты </a>
+                </div>
+              </div>
+              <!-- Navbar links end -->
+
+              <!-- social media icons start -->
+              <div
+                class="w-[220px] mt-3 languages-content flex justify-between"
+              >
+                <div
+                  class="sm-icons flex justify-between items-center w-[110px]"
+                >
+                  <a href="#" class="sm-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                    >
+                      <rect width="30" height="30" rx="15" fill="#0D2668" />
+                      <path
+                        d="M14.9679 8.25C15.866 8.28207 16.7962 8.28208 17.6943 8.31415C18.4962 8.34623 19.2339 8.47452 19.9395 8.8915C20.8376 9.43677 21.3829 10.2386 21.5754 11.265C21.6716 11.8745 21.7037 12.516 21.7357 13.1254C21.7678 14.4725 21.7357 15.8197 21.7357 17.1668C21.7357 17.8725 21.7037 18.5781 21.4791 19.2517C21.0301 20.5668 20.0999 21.3687 18.7528 21.6253C18.1433 21.7536 17.5018 21.7536 16.8924 21.7856C15.5453 21.8177 14.2302 21.7856 12.8831 21.7856C12.1774 21.7856 11.4718 21.7536 10.7982 21.529C9.4831 21.08 8.68123 20.1498 8.42463 18.8027C8.29633 18.1932 8.29633 17.5517 8.26426 16.9423C8.23218 15.5952 8.26426 14.248 8.26426 12.9009C8.26426 12.1952 8.29633 11.4896 8.52086 10.816C8.9699 9.50092 9.90008 8.69905 11.2472 8.44245C11.8567 8.31415 12.4982 8.31415 13.1076 8.28208C13.6849 8.25 14.3264 8.25 14.9679 8.25ZM20.5169 14.8895C20.4848 14.8895 20.5169 14.8895 20.5169 14.8895C20.4848 14.3442 20.4848 13.831 20.4848 13.2858C20.4848 12.7726 20.4527 12.2594 20.3886 11.7462C20.2603 10.5915 19.5867 9.82167 18.4641 9.59715C17.8867 9.46885 17.2452 9.46885 16.6679 9.46885C15.5132 9.43677 14.3906 9.43677 13.2359 9.46885C12.6585 9.46885 12.0812 9.50092 11.5359 9.59715C10.5737 9.75752 9.90008 10.3028 9.6114 11.265C9.51518 11.5858 9.4831 11.9065 9.45103 12.2273C9.41895 13.4461 9.41895 14.665 9.41895 15.8838C9.41895 16.6536 9.45103 17.4555 9.51518 18.2253C9.6114 19.38 10.3171 20.1819 11.4718 20.3743C12.0491 20.4706 12.6585 20.5026 13.268 20.5026C14.3906 20.5347 15.5132 20.5026 16.6679 20.5026C17.1811 20.5026 17.6943 20.4706 18.2075 20.4064C18.6886 20.3743 19.1377 20.214 19.5226 19.8932C20.1641 19.38 20.3886 18.7064 20.4207 17.9366C20.4848 16.9744 20.4848 15.9159 20.5169 14.8895Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M18.4321 15.0178C18.4321 16.9423 16.8925 18.4819 14.968 18.4819C13.0435 18.4819 11.5039 16.9423 11.5039 14.9857C11.5039 13.0933 13.0756 11.5537 15.0001 11.5537C16.8925 11.5537 18.4321 13.0933 18.4321 15.0178ZM14.9359 17.2631C16.1548 17.2631 17.1812 16.2367 17.1812 15.0178C17.1812 13.799 16.1548 12.7726 14.9359 12.7726C13.685 12.7726 12.6907 13.799 12.6907 15.0178C12.6907 16.2367 13.7171 17.2631 14.9359 17.2631Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M19.3625 11.3932C19.3625 11.8422 19.0096 12.2271 18.5606 12.2271C18.1115 12.2271 17.7266 11.8422 17.7587 11.3932C17.7587 10.9441 18.1115 10.5913 18.5606 10.5913C19.0096 10.5913 19.3625 10.9441 19.3625 11.3932Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                  <div
+                    class="sm-icon bg-[#0d2668] w-[30px] mx-2 h-[30px] rounded-full"
+                  >
+                    <a
+                      href="#"
+                      class="flex justify-center items-center w-full h-full"
+                    >
+                      <img src="./src/icons/bi_youtube.svg" alt="" />
+                    </a>
+                  </div>
+                  <a href="#" class="sm-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                    >
+                      <rect width="30" height="30" rx="15" fill="#0D2668" />
+                      <path
+                        d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- social media icons end -->
+            </div>
+            <!-- Left side end -->
+          </div>
+          <!-- offCanvas end -->
+        </div>
+      </div>
+      <!-- Header end -->
+      <div
+        class="mt-[60px] [@media(max-width:449px)]:mt-[40px] back-img w-full mx-auto flex justify-center bg-no-repeat bg-center bg-cover items-center h-[220px]"
+        style="background-image: url('./src/images/first-back-img.jpg')"
+      ></div>
+      <div class="div flex-[1] max-w-screen-xl h-full mx-auto">
+        <div
+          class="what-we-do h-fit px-2 max-w-screen-xl mx-auto [@media(max-width:850px)]:my-10 [@media(min-width:850px)]:my-20"
+        >
+          <div
+            class="flex justify-between items-center flex-wrap [@media(min-width:850px)]:h-[500px] [@media(max-width:850px)]:h-fit"
+          >
+            <!-- text content side start -->
+            <div
+              class="col [@media(max-width:850px)]:mb-2 pb-3 [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full h-fit flex justify-start items-center"
+            >
+              <div class="text-content">
+                <!-- Title start -->
+                <div class="title-content w-fit">
+                  <div
+                    class="title text-[#0D2668] text-[40px] font-[600] max-sm:text-[32px]"
+                  >
+                    О компании
+                  </div>
+                  <hr class="border-none bg-[#0D2668] w-1/3 h-[2px]" />
+                </div>
+                <!-- Title end -->
+
+                <!-- Description start -->
+                <div
+                  class="mt-5 mb-7 decription max-h-[440px] max-sm:max-h-[340px] text-[18px] max-sm:text-[15px] text-[#696969] overflow-hidden"
+                >
+                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  con Ut enim ad minima veniam, quis nostrum exercitationem
+                  ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                  commodi con Ut enim ad minima veniam, quis nostrum
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut
+                  aliquid ex ea commodi con Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam corporis suscipit laboriosam,
+                  nisi ut aliquid ex ea commodi con Ut enim ad minima veniam,
+                  quis nostrum exercitationem ullam Ut enim ad minima veniam,
+                  quis nostrum exercitationem ullam Ut enim Ut enim ad minima
+                  veniam, quis nostrum exercitationem ullam corporis suscipit
+                  laboriosam, nisi ut aliquid ex ea commodi con Ut enim ad
+                  minima veniam, quis nostrum exercitationem ullam corporis
+                  suscipit laboriosam, nisi ut aliquid ex ea commodi con Ut enim
+                  ad minima veniam, quis nostrum exercitationem ullam corporis
+                  suscipit laboriosam, nisi ut aliquid ex ea commodi con Ut enim
+                  ad minima veniam, quis nostrum exercitationem ullam Ut enim ad
+                  minima veniam, quis nostrum exercitationem ullam Ut enim Ut
+                  enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  con Ut enim ad minima veniam, quis nostrum exercitationem
+                  ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                  commodi con Ut enim ad minima veniam, quis nostrum
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut
+                  aliquid ex ea commodi con Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam Ut enim ad minima veniam, quis
+                  nisi ut aliquid ex ea commodi con Ut enim ad minima veniam,
+                  quis nostrum exercitationem ullam Ut enim ad minima veniam,
+                  quis nostrum exercitationem ullam Ut enim Ut enim ad minima
+                  veniam, quis nostrum exercitationem ullam corporis suscipit
+                  laboriosa
+                </div>
+                <!-- Description end -->
+              </div>
+            </div>
+            <!-- text content side end -->
+
+            <!-- img content side start -->
+            <div
+              class="col overflow-hidden [@media(min-width:850px)]:w-[48%] [@media(max-width:850px)]:w-full [@media(min-width:850px)]:h-full [@media(min-width:768px)]:h-[500px] [@media(min-width:576px)]:h-[400px] [@media(max-width:576px)]:h-[300px]"
+            >
+              <img
+                src="./src/images/home-tashkent.jpg"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- img content side end -->
+          </div>
+        </div>
+
+        <div class="pl-2">
+          m, nisi ut aliquid ex ea commodi con Ut enim ad minima veniam, quis
+          nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+          aliquid ex ea commodi con Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi con Ut enim ad minima veniam, quis nostrum exercitationem
+          ullam Ut enim ad minima veniam, quis nostrum exercitationem ullam Ut
+          enim Ut enim ad minima veniam, quis nostrum exercitationem ullam
+          corporis suscipit laboriosam, nisi ut aliquid ex ea commodi con Ut
+          enim ad minima veniam, quis nostrum exercitationem ullam corporis
+          suscipit laboriosam, nisi ut aliquid ex ea commodi con Ut enim ad
+          minima veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi con Ut enim ad minima
+          veniam, quis nostrum exercitationem ullam Ut enim ad minima veniam,
+          quis nostrum exercitationem ullam Ut enim ad minima veniam, quis
+          nostrum exercitationem ullam Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam Ut enim ad minima veniam, quis nostrum
+          exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex
+          ea commodi conABC
+        </div>
+      </div>
+
+      <!-- Footer start -->
+      <div
+        class="footer sticky t-[100vh] w-full py-5 bg-[#0D1C45] px-3 mx-auto"
+      >
+        <div
+          class="text-content max-w-screen-xl mx-auto flex flex-wrap justify-between items-center"
+        >
+          <div
+            class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center [@media(max-width:576px)]:mb-2"
+          >
+            <a href="./index.html" class="text-[white]"
+              >“Uy Bozorim” Все права защищены</a
+            >
+          </div>
+          <div
+            class="links [@media(max-width:1000px)]:hidden [@media(min-width:1000px)]:flex w-fit justify-between items-center"
+          >
+            <a
+              href="./about.html"
+              class="link mx-5 font-[500] text-[white] text-[16px]"
+            >
+              О нас
+            </a>
+            <a
+              href="./index.html#branches"
+              class="link mx-5 font-[500] text-[white] text-[16px]"
+            >
+              Филиалы
+            </a>
+            <a
+              href="./index.html#partners"
+              class="link mx-5 font-[500] text-[white] text-[16px]"
+            >
+              Партнеры
+            </a>
+            <a
+              href="./index.html#contacts"
+              class="link mx-5 font-[500] text-[white] text-[16px]"
+            >
+              Контакты
+            </a>
+          </div>
+          <div
+            class="text-[14px] [@media(min-width:576px)]:w-fit [@media(max-width:576px)]:w-full [@media(max-width:576px)]:text-center"
+          >
+            <a class="text-[white]" href="https://sos.uz">
+              © Copyright 2023 - SOS Group
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Footer end -->
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script type="module" src="./src/js/swiper.js"></script>
+    <script src="./src/js/app.js"></script>
+  </body>
+</html>

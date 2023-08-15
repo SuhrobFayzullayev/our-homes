@@ -67,7 +67,9 @@
     font-weight: 600;
   }
 
-  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+  .swiper-pagination-2
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #0d2668 !important;
   }
 
