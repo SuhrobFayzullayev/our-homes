@@ -3786,6 +3786,10 @@ body,
     width: 40px;
   }
 
+  .\[\@media\(min-width\:768px\)\]\:w-\[33\%\] {
+    width: 33%;
+  }
+
   .\[\@media\(min-width\:768px\)\]\:text-\[20px\] {
     font-size: 20px;
   }
