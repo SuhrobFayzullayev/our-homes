@@ -47,23 +47,10 @@
     animation-delay: 5s;
   }
 
-  .slide-thirth {
-    animation: horizontal-scrolling-animation 10s linear infinite;
-    animation-delay: 7s;
-  }
-
   .infinity-wrapper:hover .slide-first,
-  .infinity-wrapper:hover .slide-second {
+  .infinity-wrapper:hover .slide-second,
+  .infinity-wrapper:hover .slide-thirth {
     animation-play-state: paused;
-  }
-
-  @keyframes horizontal-scrolling-animation {
-    0% {
-      left: 100%;
-    }
-    100% {
-      left: -100%;
-    }
   }
 
   .swiper-button-next:after,
@@ -89,6 +76,15 @@
     .swiper .swiper-button-next:after,
     .swiper .swiper-button-prev:after {
       font-size: 10px !important;
+    }
+  }
+
+  @keyframes horizontal-scrolling-animation {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%;
     }
   }
 }

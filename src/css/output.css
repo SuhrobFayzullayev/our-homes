@@ -484,24 +484,10 @@ body,
   animation-delay: 5s;
 }
 
-.slide-thirth {
-  animation: horizontal-scrolling-animation 10s linear infinite;
-  animation-delay: 7s;
-}
-
 .infinity-wrapper:hover .slide-first,
-  .infinity-wrapper:hover .slide-second {
+  .infinity-wrapper:hover .slide-second,
+  .infinity-wrapper:hover .slide-thirth {
   animation-play-state: paused;
-}
-
-@keyframes horizontal-scrolling-animation {
-  0% {
-    left: 100%;
-  }
-
-  100% {
-    left: -100%;
-  }
 }
 
 .swiper-button-next:after,
@@ -527,6 +513,16 @@ body,
   .swiper .swiper-button-next:after,
     .swiper .swiper-button-prev:after {
     font-size: 10px !important;
+  }
+}
+
+@keyframes horizontal-scrolling-animation {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: -100%;
   }
 }
 
@@ -919,6 +915,14 @@ body,
   margin-top: 60px;
 }
 
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1137,10 +1141,6 @@ body,
 
 .w-\[65\%\] {
   width: 65%;
-}
-
-.w-\[66\%\] {
-  width: 66%;
 }
 
 .w-fit {
@@ -2179,11 +2179,6 @@ body,
   border-color: rgb(13 38 104 / var(--tw-border-opacity));
 }
 
-.bg-\[\#00ff0d\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 255 13 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#0D1C45\] {
   --tw-bg-opacity: 1;
   background-color: rgb(13 28 69 / var(--tw-bg-opacity));
@@ -2242,6 +2237,11 @@ body,
 }
 
 .bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ffffff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
@@ -2649,11 +2649,6 @@ body,
 .stacked-fractions {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
-}
-
-.text-\[\#00ff04\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 255 4 / var(--tw-text-opacity));
 }
 
 .text-\[\#0D2668\] {
@@ -3334,16 +3329,54 @@ body,
 }
 
 @media(max-width:540px) {
-  .\[\@media\(max-width\:540px\)\]\:flex {
-    display: flex;
+  .\[\@media\(max-width\:540px\)\]\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:mx-7 {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:mx-10 {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
   }
 
   .\[\@media\(max-width\:540px\)\]\:hidden {
     display: none;
   }
 
-  .\[\@media\(max-width\:540px\)\]\:w-\[66\%\] {
-    width: 66%;
+  .\[\@media\(max-width\:540px\)\]\:translate-x-\[50px\] {
+    --tw-translate-x: 50px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:translate-x-\[40px\] {
+    --tw-translate-x: 40px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:justify-center {
+    justify-content: center;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:justify-between {
+    justify-content: space-between;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:justify-around {
+    justify-content: space-around;
+  }
+
+  .\[\@media\(max-width\:540px\)\]\:pl-2 {
+    padding-left: 0.5rem;
   }
 }
 
@@ -3651,16 +3684,29 @@ body,
 }
 
 @media(min-width:540px) {
+  .\[\@media\(min-width\:540px\)\]\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
   .\[\@media\(min-width\:540px\)\]\:block {
     display: block;
   }
 
-  .\[\@media\(min-width\:540px\)\]\:hidden {
-    display: none;
+  .\[\@media\(min-width\:540px\)\]\:justify-center {
+    justify-content: center;
   }
 
-  .\[\@media\(min-width\:540px\)\]\:w-full {
-    width: 100%;
+  .\[\@media\(min-width\:540px\)\]\:justify-between {
+    justify-content: space-between;
+  }
+
+  .\[\@media\(min-width\:540px\)\]\:justify-around {
+    justify-content: space-around;
+  }
+
+  .\[\@media\(min-width\:540px\)\]\:justify-evenly {
+    justify-content: space-evenly;
   }
 }
 
