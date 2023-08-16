@@ -1,54 +1,124 @@
-<!-- Infinity scrolling texts start -->
-<div
-  class="infinity-wrapper mb-[75px] relative flex justify-between items-center py-10 w-full bg-[#0D2668] overflow-hidden"
->
-  <div
-    class="slide-first absolute left-0 flex justify-evenly items-center w-full"
-  >
-    <div class="slide w-fit text-[white] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-white text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-white text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-[white] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-white text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5"></div>
-  </div>
-  <div
-    class="slide-second flex justify-between items-center w-full absolute left-[100%]"
-  >
-    <div class="slide w-fit text-[red] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-[red] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-[red] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-[red] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
-    <div class="slide w-fit text-[red] text-[18px]">
-      Lorem ipsum dolor sit amet.
-    </div>
-    <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
-  </div>
-</div>
-<!-- Infinity scrolling texts end -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/output.css" />
+  </head>
+  <body>
+    <body>
+      <!-- Infinity scrolling texts start -->
+      <div
+        class="infinity-wrapper mb-[75px] relative flex justify-between items-center py-10 w-full bg-[#0D2668] overflow-hidden"
+      >
+        <div
+          class="slide-first flex absolute left-0 justify-evenly items-center [@media(min-width:540px)]:w-full [@media(max-width:540px)]:w-[70%]"
+        >
+          <div class="slide w-fit text-[white] text-[18px]">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div class="dot rounded-full bg-white w-[10px] h-[10px] mx-5"></div>
+
+          <div
+            class="slide w-fit text-white text-[18px] [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:540px)]:block [@media(max-width:540px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-white text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-[white] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-white text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-white w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-[white] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-white w-[10px] h-[10px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden mx-5"
+          ></div>
+        </div>
+
+        <div
+          class="slide-second flex justify-between items-center [@media(min-width:540px)]:w-full [@media(max-width:540px)]:w-[130%] absolute left-[100%]"
+        >
+          <div class="slide w-fit text-[red] text-[18px]">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
+
+          <div class="slide w-fit text-[red] text-[18px]">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5"></div>
+
+          <div
+            class="slide w-fit text-[red] text-[18px] [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5 [@media(min-width:820px)]:block [@media(max-width:820px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-[red] text-[18px] [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5 [@media(min-width:1085px)]:block [@media(max-width:1085px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-[red] text-[18px] [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5 [@media(min-width:1600px)]:block [@media(max-width:1400px)]:hidden"
+          ></div>
+
+          <div
+            class="slide w-fit text-[red] text-[18px] [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden"
+          >
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div
+            class="dot rounded-full bg-[red] w-[10px] h-[10px] mx-5 [@media(min-width:1700px)]:block [@media(max-width:1700px)]:hidden"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Infinity scrolling texts end -->
+    </body>
+  </body>
+</html>
