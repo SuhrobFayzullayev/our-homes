@@ -39,12 +39,12 @@
   }
 
   .slide-first {
-    animation: horizontal-scrolling-animation 10s linear infinite;
+    animation: horizontal-scrolling-animation 20s linear infinite;
   }
 
   .slide-second {
-    animation: horizontal-scrolling-animation 10s linear infinite;
-    animation-delay: 5s;
+    animation: horizontal-scrolling-animation 20s linear infinite;
+    animation-delay: 10s;
   }
 
   .infinity-wrapper:hover .slide-first,
