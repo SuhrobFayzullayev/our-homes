@@ -484,6 +484,11 @@ body,
   animation-delay: 5s;
 }
 
+.slide-thirth {
+  animation: horizontal-scrolling-animation 10s linear infinite;
+  animation-delay: 7s;
+}
+
 .infinity-wrapper:hover .slide-first,
   .infinity-wrapper:hover .slide-second {
   animation-play-state: paused;
@@ -1132,6 +1137,10 @@ body,
 
 .w-\[65\%\] {
   width: 65%;
+}
+
+.w-\[66\%\] {
+  width: 66%;
 }
 
 .w-fit {
@@ -2170,6 +2179,11 @@ body,
   border-color: rgb(13 38 104 / var(--tw-border-opacity));
 }
 
+.bg-\[\#00ff0d\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 255 13 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#0D1C45\] {
   --tw-bg-opacity: 1;
   background-color: rgb(13 28 69 / var(--tw-bg-opacity));
@@ -2635,6 +2649,11 @@ body,
 .stacked-fractions {
   --tw-numeric-fraction: stacked-fractions;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.text-\[\#00ff04\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 255 4 / var(--tw-text-opacity));
 }
 
 .text-\[\#0D2668\] {
@@ -3315,16 +3334,16 @@ body,
 }
 
 @media(max-width:540px) {
+  .\[\@media\(max-width\:540px\)\]\:flex {
+    display: flex;
+  }
+
   .\[\@media\(max-width\:540px\)\]\:hidden {
     display: none;
   }
 
-  .\[\@media\(max-width\:540px\)\]\:w-\[130\%\] {
-    width: 130%;
-  }
-
-  .\[\@media\(max-width\:540px\)\]\:w-\[70\%\] {
-    width: 70%;
+  .\[\@media\(max-width\:540px\)\]\:w-\[66\%\] {
+    width: 66%;
   }
 }
 
@@ -3636,6 +3655,10 @@ body,
     display: block;
   }
 
+  .\[\@media\(min-width\:540px\)\]\:hidden {
+    display: none;
+  }
+
   .\[\@media\(min-width\:540px\)\]\:w-full {
     width: 100%;
   }
@@ -3778,16 +3801,12 @@ body,
     height: 500px;
   }
 
-  .\[\@media\(min-width\:768px\)\]\:w-\[31\%\] {
-    width: 31%;
+  .\[\@media\(min-width\:768px\)\]\:w-\[33\%\] {
+    width: 33%;
   }
 
   .\[\@media\(min-width\:768px\)\]\:w-\[40px\] {
     width: 40px;
-  }
-
-  .\[\@media\(min-width\:768px\)\]\:w-\[33\%\] {
-    width: 33%;
   }
 
   .\[\@media\(min-width\:768px\)\]\:text-\[20px\] {

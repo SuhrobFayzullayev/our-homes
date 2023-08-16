@@ -47,6 +47,11 @@
     animation-delay: 5s;
   }
 
+  .slide-thirth {
+    animation: horizontal-scrolling-animation 10s linear infinite;
+    animation-delay: 7s;
+  }
+
   .infinity-wrapper:hover .slide-first,
   .infinity-wrapper:hover .slide-second {
     animation-play-state: paused;
