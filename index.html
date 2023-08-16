@@ -36,7 +36,10 @@
             class="navbar mx-auto max-w-screen-xl flex justify-between items-center py-3"
           >
             <!-- Navbar toogler start -->
-            <div id="navbar-toggler" class="navbar-toggler block lg:hidden">
+            <div
+              id="navbar-toggler"
+              class="navbar-toggler block cursor-pointer lg:hidden"
+            >
               <img
                 class="[@media(min-width:450px)]:w-[25px] [@media(min-width:450px)]:h-[25px] [@media(max-width:450px)]:w-[20px] [@media(max-width:450px)]:h-[20px]"
                 src="https://img.icons8.com/ios-filled/50/000000/menu--v6.png"
@@ -934,6 +937,65 @@
                 </div>
               </div>
             </div>
+            <div
+              class="video-card 3 [@media(min-width:500px)]:w-[33.3%] [@media(min-width:420px)]:w-[50%] [@media(max-width:420px)]:w-[100%] overflow-hidden p-2"
+            >
+              <div class="w-full shadow-md h-full bg-white">
+                <div
+                  class="img-content [@media(min-width:768px)]:h-[250px] [@media(min-width:650px)]:h-[180px] [@media(min-width:420px)]:h-[120px] [@media(max-width:420px)]:h-[180px] relative"
+                >
+                  <div
+                    id="video-play-btn"
+                    class="play [@media(min-width:768px)]:w-[40px] [@media(min-width:768px)]:h-[40px] [@media(max-width:768px)]:w-[25px] [@media(max-width:768px)]:h-[25px] cursor-pointer absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"
+                  >
+                    <svg
+                      onclick="activeVideo(event)"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 60 60"
+                      fill="none"
+                      class="w-full h-full"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M30 0C13.4314 0 0 13.4316 0 30C0 46.5684 13.4314 60 30 60C46.5686 60 60 46.5684 60 30C60 13.4316 46.5686 0 30 0ZM26 36.9282L38 30L26 23.0718V36.9282Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <a data-fancybox href="https://youtu.be/ldbvjn2sIzg">
+                    <img
+                      id="videoImg"
+                      class="w-full h-full object-cover"
+                      src="./src/images/slider-room-1.jpg"
+                    />
+                  </a>
+                </div>
+                <div
+                  class="text-content h-full overflow-hidden [@media(min-width:700px)]:py-2 [@media(max-width:700px)]:py-1 px-3"
+                >
+                  <!-- Text Content start -->
+                  <div class="text-content py-2 h-full w-full overflow-hidden">
+                    <!-- Title start -->
+                    <div
+                      class="title [@media(min-width:700px)]:text-[18px] [@media(max-width:700px)]:text-[16px] text-[#0D2668] font-[600]"
+                    >
+                      John Doe
+                    </div>
+                    <!-- Title end -->
+
+                    <!-- Description start -->
+                    <div
+                      class="description mt-1 [@media(min-width:700px)]:max-h-[115px] [@media(max-width:700px)]:max-h-[60px] overflow-hidden [@media(min-width:700px)]:text-[15px] [@media(max-width:700px)]:text-[13px]"
+                    >
+                      LoremLorem Lorem ipsu LoremLorem
+                    </div>
+                    <!-- Description end -->
+                  </div>
+                  <!-- Text Content end -->
+                </div>
+              </div>
+            </div>
           </div>
 
           <div
@@ -998,10 +1060,16 @@
                   ></textarea>
                 </div>
                 <div class="upload-video mb-5 w-full">
-                  <input type="file" class="hidden" id="file" />
+                  <input
+                    type="file"
+                    class="hidden"
+                    onchange="takeFileName(event)"
+                    id="file"
+                  />
                   <label
+                    id="fileLabel"
                     for="file"
-                    class="border text-center block bg-white border-[#0D2668] [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#0D2668]"
+                    class="border cursor-pointer text-center block bg-white border-[#0D2668] [@media(min-width:576px)]:py-2 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-1 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[#0D2668]"
                   >
                     Загрузить видео
                   </label>

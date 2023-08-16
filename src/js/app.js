@@ -86,3 +86,7 @@ sentFeedbackBtn.addEventListener("click", () => {
 function moreVideo() {
   videosWrapper.innerHTML = oldAllVideos;
 }
+
+function takeFileName(e) {
+  document.querySelector("#fileLabel").textContent = e.target.files[0].name;
+}
