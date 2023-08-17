@@ -66,6 +66,17 @@
     background-color: #0d2668 !important;
   }
 
+  .sponsors-logo-wrapper .item:nth-child(4),
+  .sponsors-logo-wrapper .item:nth-child(8) {
+    border-right: none !important;
+  }
+  .sponsors-logo-wrapper .item:nth-child(5),
+  .sponsors-logo-wrapper .item:nth-child(6),
+  .sponsors-logo-wrapper .item:nth-child(7),
+  .sponsors-logo-wrapper .item:nth-child(8) {
+    border-bottom: none !important;
+  }
+
   @media (min-width: 850px) and (max-width: 1300px) {
     .swiper .swiper-pagination {
       bottom: 0px !important;
