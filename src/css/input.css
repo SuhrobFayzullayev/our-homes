@@ -77,6 +77,10 @@
     border-bottom: none !important;
   }
 
+  .text-description-accordion {
+    color: #0d2668 !important;
+  }
+
   @media (min-width: 850px) and (max-width: 1300px) {
     .swiper .swiper-pagination {
       bottom: 0px !important;

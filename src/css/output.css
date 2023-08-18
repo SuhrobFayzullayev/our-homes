@@ -527,6 +527,10 @@ body,
   border-bottom: none !important;
 }
 
+.text-description-accordion {
+  color: #0d2668 !important;
+}
+
 @media (min-width: 850px) and (max-width: 1300px) {
   .swiper .swiper-pagination {
     bottom: 0px !important;
@@ -3372,12 +3376,6 @@ body,
   }
 }
 
-@media(max-width:576) {
-  .\[\@media\(max-width\:576\)\]\:text-\[14px\] {
-    font-size: 14px;
-  }
-}
-
 @media(max-width:576px) {
   .\[\@media\(max-width\:576px\)\]\:mb-2 {
     margin-bottom: 0.5rem;
@@ -3425,6 +3423,10 @@ body,
 
   .\[\@media\(max-width\:576px\)\]\:text-\[14px\] {
     font-size: 14px;
+  }
+
+  .\[\@media\(max-width\:576px\)\]\:text-\[15px\] {
+    font-size: 15px;
   }
 
   .\[\@media\(max-width\:576px\)\]\:text-\[16px\] {
@@ -3682,12 +3684,6 @@ body,
 
   .\[\@media\(min-width\:540px\)\]\:justify-evenly {
     justify-content: space-evenly;
-  }
-}
-
-@media(min-width:576) {
-  .\[\@media\(min-width\:576\)\]\:text-\[18px\] {
-    font-size: 18px;
   }
 }
 

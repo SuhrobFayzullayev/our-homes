@@ -1245,6 +1245,7 @@
             <!-- Description end -->
           </div>
           <!-- Text content end -->
+
           <div class="max-w-[800px] mx-auto">
             <div class="relative" x-data="{selected:null}">
               <button
@@ -1280,113 +1281,7 @@
                 x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
               >
                 <div
-                  class="py-5 text-description [@media(min-width:576)]:text-[18px] [@media(max-width:576)]:text-[14px] text-[#0D2668]"
-                >
-                  Sed ut perspiciatis, unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium totam rem aperiam
-                  eaque ipsa, quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam
-                  voluptatem, quia voluptas sit, aspernatur aut odit aut fugit,
-                  libero tempore, cum soluta nobis est eligendi optio, cumque
-                  nihil impedit, quo minus id, quod maxime placeat, facere
-                  possimus, omnis voluptas assumenda est, omnis dolor
-                  repellendus. Temporibus autem quibusdam et aut officiis
-                  debitis aut rerum necessitatibus saepe eveniet, ut et
-                  voluptates repudiandae sint et molestiae non recusandae.
-                  Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                  reiciendis voluptatibus maiores alias consequatur aut
-                  perferendis doloribus asperiores repellat.
-                </div>
-              </div>
-            </div>
-            <div class="relative" x-data="{selected:null}">
-              <button
-                type="button"
-                class="w-full border-t border-b py-5 text-left flex justify-between items-center"
-                @click="selected !== 1 ? selected = 1 : selected = null"
-              >
-                <div
-                  class="title [@media(min-width:576px)]:text-[20px] [@media(max-width:576px)]:text-[17px] font-[600] text-[#0D2668]"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-                </div>
-
-                <div class="plus-icon w-[18px] he-[18px]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="w-full h-full"
-                  >
-                    <path d="M0 11H24V13H0V11Z" fill="#0D2668" />
-                    <path
-                      d="M13 8.74224e-08L13 24H11L11 0L13 8.74224e-08Z"
-                      fill="#0D2668"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              <div
-                class="relative overflow-hidden transition-all max-h-0 duration-700"
-                x-ref="container1"
-                x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-              >
-                <div
-                  class="py-5 text-description [@media(min-width:576)]:text-[18px] [@media(max-width:576)]:text-[14px] text-[#0D2668]"
-                >
-                  Sed ut perspiciatis, unde omnis iste natus error sit
-                  voluptatem accusantium doloremque laudantium totam rem aperiam
-                  eaque ipsa, quae ab illo inventore veritatis et quasi
-                  architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam
-                  voluptatem, quia voluptas sit, aspernatur aut odit aut fugit,
-                  libero tempore, cum soluta nobis est eligendi optio, cumque
-                  nihil impedit, quo minus id, quod maxime placeat, facere
-                  possimus, omnis voluptas assumenda est, omnis dolor
-                  repellendus. Temporibus autem quibusdam et aut officiis
-                  debitis aut rerum necessitatibus saepe eveniet, ut et
-                  voluptates repudiandae sint et molestiae non recusandae.
-                  Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                  reiciendis voluptatibus maiores alias consequatur aut
-                  perferendis doloribus asperiores repellat.
-                </div>
-              </div>
-            </div>
-            <div class="relative" x-data="{selected:null}">
-              <button
-                type="button"
-                class="w-full border-t border-b py-5 text-left flex justify-between items-center"
-                @click="selected !== 1 ? selected = 1 : selected = null"
-              >
-                <div
-                  class="title [@media(min-width:576px)]:text-[20px] [@media(max-width:576px)]:text-[17px] font-[600] text-[#0D2668]"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-                </div>
-
-                <div class="plus-icon w-[18px] he-[18px]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="w-full h-full"
-                  >
-                    <path d="M0 11H24V13H0V11Z" fill="#0D2668" />
-                    <path
-                      d="M13 8.74224e-08L13 24H11L11 0L13 8.74224e-08Z"
-                      fill="#0D2668"
-                    />
-                  </svg>
-                </div>
-              </button>
-
-              <div
-                class="relative overflow-hidden transition-all max-h-0 duration-700"
-                x-ref="container1"
-                x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-              >
-                <div
-                  class="py-5 text-description [@media(min-width:576)]:text-[18px] [@media(max-width:576)]:text-[14px] text-[#0D2668]"
+                  class="py-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[15px] text-description-accordion"
                 >
                   Sed ut perspiciatis, unde omnis iste natus error sit
                   voluptatem accusantium doloremque laudantium totam rem aperiam
