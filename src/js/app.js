@@ -90,3 +90,6 @@ function moreVideo() {
 function takeFileName(e) {
   document.querySelector("#fileLabel").textContent = e.target.files[0].name;
 }
+
+const el = document.querySelector(".i4ewOd-pzNkMb-haAclf")
+el?.revome()
