@@ -56,6 +56,28 @@ html {
   display:none !important;
 }
 
+/* remove map header */
+div#block-yui_3_17_2_1_1686779440390_6068>div {
+    overflow-x: hidden;
+}
+div#block-yui_3_17_2_1_1686779440390_6068 iframe {
+    margin-top: -65px;
+}
+
+div.embed-block .embed-block-wrapper {
+    overflow: hidden;
+}
+iframe.embedly-embed {
+    margin-top: -80px;
+}
+
+div.embed-block .embed-block-wrapper {
+    overflow: hidden;
+}
+iframe.embedly-embed {
+    margin-top: -80px;
+}
+
 /*
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
